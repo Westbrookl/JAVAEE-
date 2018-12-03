@@ -1,0 +1,21 @@
+package com.jhc.运行时获取泛型的真是类型;
+
+import java.util.Map;
+
+abstract class GenericType<T>{
+	
+}
+public class TestGenericType extends GenericType<String> {
+	private Map<String,Integer> map;
+	
+	public Map<String,Integer> getMap(){
+		return map;
+	}
+	public void setMap(Map<String,Integer> map1){
+		this.map = map1;
+	}
+	public static void main(String[] args){
+		Class<TestGenericType> tClass =  TestGenericType.class;
+		
+	}
+}

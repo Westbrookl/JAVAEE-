@@ -1,0 +1,13 @@
+package 成员内部类;
+
+public class Outer {
+	public Outer(){
+		
+	}
+	
+	 class Inner(){
+		public Inner(){
+			
+		}
+	}
+}

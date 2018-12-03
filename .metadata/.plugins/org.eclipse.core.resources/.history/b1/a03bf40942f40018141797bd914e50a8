@@ -1,0 +1,27 @@
+package NIO;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.Selector;
+import java.nio.channels.SocketChannel;
+import java.util.HashMap;
+import java.util.Map;
+
+public class NIOServer {
+	private int port = 8888;
+	private Map<String,SocketChannel> clientMap = new HashMap();
+	private ByteBuffer sBuffer = ByteBuffer.allocate(1024);
+	private ByteBuffer rBuffer = ByteBuffer.allocate(1024);
+	private Selector selector ;
+	public NIOServer(int port){
+		this.port = port;
+		try{
+			init();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	public void init() throws IOException{
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.jhc.运行时获取泛型的真是类型;
+
+public class TestGenericType {
+
+}

@@ -1,0 +1,12 @@
+package NIO;
+
+import java.nio.ByteBuffer;
+import java.nio.channels.Selector;
+
+public class NIOClient {
+	private static Selector selector;
+	private ByteBuffer rBuffer = ByteBuffer.allocate(1024);
+	private ByteBuffer sBuffer = ByteBuffer.allocate(1024);
+	
+	
+}

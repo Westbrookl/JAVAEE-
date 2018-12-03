@@ -1,0 +1,17 @@
+package 测试;
+/**
+ * 关于内部类的初始 化
+ * @author jhc
+ *
+ */
+public class Test1 {
+	public static void main(String[] args){
+		
+	}
+	class Bean1{
+		public int i=0;
+	}
+	static class Bean2{
+		public int j = 0;
+	}
+}

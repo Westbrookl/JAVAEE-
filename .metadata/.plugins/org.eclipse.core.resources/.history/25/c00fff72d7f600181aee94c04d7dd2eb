@@ -1,0 +1,18 @@
+package ¾²Ì¬ÄÚ²¿Àà;
+
+public class Test {
+	public static void main(String[] args){
+		
+	}
+	class Outer{
+		public Outer(){
+			
+		}
+		static class Inner{
+			public Inner(){
+				
+			}
+		}
+	}
+	
+}

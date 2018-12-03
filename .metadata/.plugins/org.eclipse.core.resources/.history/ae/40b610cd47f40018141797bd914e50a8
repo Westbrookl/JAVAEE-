@@ -1,0 +1,26 @@
+package NIO;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.Selector;
+import java.nio.charset.Charset;
+
+public class NIOClient {
+	private static Selector selector;
+	private ByteBuffer rBuffer = ByteBuffer.allocate(1024);
+	private ByteBuffer sBuffer = ByteBuffer.allocate(1024);
+	private Charset charset = Charset.forName("UTF-8");
+	private int SERVER = 8888;
+	public NIOClient(int port){
+		this.SERVER = port;
+		try{
+			init();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	public void init()throws IOException{
+		
+	}
+	
+}

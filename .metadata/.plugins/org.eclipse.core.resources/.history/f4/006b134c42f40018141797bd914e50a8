@@ -1,0 +1,43 @@
+package NIO;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.util.HashMap;
+import java.util.Map;
+
+public class NIOServer {
+	private int port = 8888;
+	private Map<String,SocketChannel> clientMap = new HashMap();
+	private ByteBuffer sBuffer = ByteBuffer.allocate(1024);
+	private ByteBuffer rBuffer = ByteBuffer.allocate(1024);
+	private static Selector selector ;
+	public NIOServer(int port){
+		this.port = port;
+		try{
+			init();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	public void init() throws IOException{
+		
+		ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+		serverSocketChannel.configureBlocking(false);
+		ServerSocket serverSocket = serverSocketChannel.socket();
+		serverSocket.bind(new InetSocketAddress(port));
+		selector = Selector.open();
+		serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+		System.out.println("服务器启动端口为： "+ port);
+	}
+	public void listen(){
+		while(true){
+			
+		}
+	}
+}

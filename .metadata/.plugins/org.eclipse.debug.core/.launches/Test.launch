@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/java基础-深入理解反射机制与使用/src/com/jhc/运行时反射获得类的结构信息/Test.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.jhc.运行时反射获得类的结构信息.Test"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="java基础-深入理解反射机制与使用"/>
+</launchConfiguration>

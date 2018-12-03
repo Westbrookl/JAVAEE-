@@ -1,0 +1,16 @@
+package 静态内部类;
+/**
+ * 静态内部类与成员内部类的区别在于
+ * 在创建静态内部类的时候不会有一个指向外部类的引用
+ * 是独立的，这也就解释了
+ * @author jhc
+ *
+ */
+public class Test {
+	public static void main(String[] args){
+		Outer.Inner inner = new Outer.Inner();
+		
+	}
+
+	
+}

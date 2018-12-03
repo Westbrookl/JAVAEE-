@@ -1,0 +1,9 @@
+package NIO;
+
+import java.nio.channels.Selector;
+
+public class NIOClient {
+	private static Selector selector;
+	
+	
+}

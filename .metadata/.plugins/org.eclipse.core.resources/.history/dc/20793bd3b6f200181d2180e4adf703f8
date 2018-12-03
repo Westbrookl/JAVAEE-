@@ -1,0 +1,39 @@
+package com.jhc.运行时反射获得类的结构信息;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.reflect.Constructor;
+
+public class Test {
+	public static void main(String[] args)throws ClassNotFoundException,NoSuchMethodException,
+	NoSuchFieldException{
+		Class<User> user = User.class;
+		Constructor userCons = user.getConstructor(String.class);
+		System.out.println("Constructor: "+ userCons);
+		
+	}
+	@MyAnnation
+	public static class User implements IUser{
+		private String name;
+		public User(){
+			
+		}
+		public String getName(){
+			return name;
+		}
+		public void setName(String name){
+			this.name = name;
+		}
+		
+	}
+	public static interface IUser{
+		
+	}
+	@Retention(RetentionPolicy.RUNTIME)
+	@Target(ElementType.TYPE)
+	public static @interface MyAnnation{
+		
+	}
+}

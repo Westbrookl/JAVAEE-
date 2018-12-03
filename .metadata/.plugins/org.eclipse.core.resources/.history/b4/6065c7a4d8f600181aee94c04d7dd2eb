@@ -1,0 +1,17 @@
+package 匿名内部类;
+
+public class Test {
+	public static void main(String[] args){
+		final int i = 3;
+		test( i);
+	}
+	public static void test(final int a ){
+		final int b = 5;
+		new Thread(){
+			public void run(){
+				System.out.println(a);
+				System.out.println(b);
+			}
+		}.start();
+	}
+}

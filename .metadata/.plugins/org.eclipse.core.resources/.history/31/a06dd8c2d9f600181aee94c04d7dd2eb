@@ -1,0 +1,12 @@
+package ²âÊÔ;
+
+public class Outer {
+	private int i = 0;
+	class Inner{
+		private int i = 1;
+		public Inner(){
+			int i = 5;
+			
+		}
+	}
+}

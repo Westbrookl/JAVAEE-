@@ -1,0 +1,7 @@
+package com.jhc.运行时获取泛型的真是类型;
+abstract class GenericType<T>{
+	
+}
+public class TestGenericType extends GenericType<String> {
+	
+}

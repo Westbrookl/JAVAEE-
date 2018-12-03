@@ -1,0 +1,20 @@
+package 成员内部类;
+
+public class Circle {
+	private double radius = 0;
+	public Circle(double radius){
+		this.radius = radius;
+		getDrawInstance().display();
+	}
+	private Draw getDrawInstance(){
+		return new Draw();
+	}
+	class Draw{
+		public void display(){
+			System.out.println(radius);
+		}
+	}
+	public static void main(String[] args){
+		System.out.println(new Circle(1.0));
+	}
+}
