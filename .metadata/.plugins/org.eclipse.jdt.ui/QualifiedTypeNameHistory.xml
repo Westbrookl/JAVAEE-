@@ -24,4 +24,8 @@
 <fullyQualifiedTypeName name="java.nio.channels.SelectionKey"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="静态内部类.Outer.Inner"/>
+<fullyQualifiedTypeName name="测试.Test1.Bean1"/>
+<fullyQualifiedTypeName name="测试.Bean.Bean3"/>
+<fullyQualifiedTypeName name="测试.Outer.Inner"/>
 </qualifiedTypeNameHistroy>

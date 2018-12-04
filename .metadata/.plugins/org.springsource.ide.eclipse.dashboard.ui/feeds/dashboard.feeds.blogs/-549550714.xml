@@ -5,20 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-12-03T00:00:00Z</updated>
-  <entry>
-    <title>Spring Tips: Bootiful Microsoft Azure</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/12/03/spring-tips-bootiful-microsoft-azure" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2018-12-02:3486</id>
-    <updated>2018-12-03T00:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! In this installment of Spring Tips we look at how to use Spring to work with infrastructure on Microsoft Azure&lt;/p&gt;
-&lt;p&gt;speaker: &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long &lt;/a&gt;&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/jRgZe7kWDnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
+  <updated>2018-11-30T19:29:00Z</updated>
   <entry>
     <title>Spring Session Bean-SR1 and Apple-SR7 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2018/11/30/spring-session-bean-sr1-and-apple-sr7-released" />
@@ -1405,5 +1392,56 @@ $ docker run -p 8080:8080 myorg/myapp
   &lt;li&gt;Atomist CEO Rod Johnson just announced a new Atomist auto-fix &lt;a href="https://blog.atomist.com/spring-format-autofix/"&gt;to apply the Spring Java Format Maven plugin to any Java project&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Also, a bit tangential, but I want to extend a warm welcome to my friends at Heptio and congratulate them on their recent VMWare acquisition!&lt;/li&gt;
 &lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring CredHub 2.0.0.M1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/11/05/spring-credhub-2-0-0-m1-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Scott Frederick</name>
+    </author>
+    <id>tag:spring.io,2018-11-05:3466</id>
+    <updated>2018-11-05T20:26:51Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;I&amp;#8217;m pleased to announce the first milestone release of Spring CredHub 2.0.0, available now in the &lt;a href="https://repo.spring.io/libs-milestone-local/org/springframework/credhub/"&gt;Spring milestone repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="credhub"&gt;&lt;a class="anchor" href="#credhub"&gt;&lt;/a&gt;CredHub&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://docs.cloudfoundry.org/credhub/"&gt;CredHub&lt;/a&gt; provides centralized credential management to the Cloud Foundry platform. CredHub implements an HTTP API to securely store, generate, retrieve, and delete credentials of various types.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring CredHub provides a Java binding for the CredHub API, making it easy to integrate Spring applications with CredHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="what-s-new"&gt;&lt;a class="anchor" href="#what-s-new"&gt;&lt;/a&gt;What&amp;#8217;s New&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The 2.0.0 release brings support for CredHub server versions 1.x and 2.x, and the CredHub v1 and v2 APIs. This release also provides compatibility with Spring Framework 5 and Spring Boot 2. The GA release of Spring CredHub 2.0.0 will add a reactive alternative to the existing interfaces.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="getting-started"&gt;&lt;a class="anchor" href="#getting-started"&gt;&lt;/a&gt;Getting Started&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The Spring CredHub documentation contains a &lt;a href="https://docs.spring.io/spring-credhub/docs/2.0.0.M1/reference/html5/#getting-started"&gt;Getting started&lt;/a&gt; section to help get you started using the library. Feedback can be provided via &lt;a href="https://github.com/spring-projects/spring-credhub/issues"&gt;GitHub issues&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="acknowledgements"&gt;&lt;a class="anchor" href="#acknowledgements"&gt;&lt;/a&gt;Acknowledgements&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring CredHub borrows design concepts (and a bit of code) from &lt;a href="https://spring.io/projects/spring-vault/"&gt;Spring Vault&lt;/a&gt;. Many thanks to &lt;a href="https://twitter.com/mp911de"&gt;Mark Paluch&lt;/a&gt; for the work he&amp;#8217;s done with Spring Vault.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-credhub/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-credhub"&gt;GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-credhub/docs/2.0.0.M1/reference/html5/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
   </entry>
 </feed>

@@ -1,0 +1,39 @@
+关于在JAVA中基本类型的存储与String的存储的问题
+主要涉及到堆内存和栈内存
+栈内存用来存储的是基本类型和引用变量（即对象的变量名字）
+栈内存是用来存储对象的实例（即new 出来的新对象都由堆内存进行存储）
+对于基本类型来说
+拿 int 类型举个例子
+
+i = 1；
+j = 1;
+在内存中的存储为：首先加载i=1，在栈中没有i=1，开辟一块内存对1进行存储然后让i指向1；
+然后在创建j的时候发现栈内存中存在了 1 这个内存空间，则直接让j指向1
+第二点就是关于 == 与 equals 的区别
+== 是比较的两个变量的引用。如果两个变量的引用相同的话那么返回true否则返回false；
+equals的比较的内容 在equals的源码中通常为
+public boolean equals(Object e){
+	return e instanceof(Integer) && (Integer)e.value == value;
+}
+这段代码的主要的思想就是要判断：1 是不是同一种类型 2 他们对应的值相不相等 如果全是肯定回答的话那么这个对象和另一对象就是相等的。
+
+而对于String类型便有所不同
+因为String的构造方式有两种：
+一种是字面量构建：即 String a = "taobao";
+另一种的是对象的构建：即 String a = new String("taobao");
+这两种方式构建的对象在内存中的存储方式是不同的，对于第一种方式的存储是直接存储到栈内存当中，跟对基本类型的处理是一样的。
+而对第二种方式的存储不一样在于，因为是new创建的对象所以直接把对象存储到堆的内存当中。所以这也就导致了String a = new String("abc");
+String b = new String("abc"); a == b //false a.equals(b)//true;
+另外值得注意的一点是常量也是存储在栈内存的：比如final String MESSAGE ="abc";
+而对于字符串的+（例如"abc"+"bcd"）也是分为两种情况 这两种的区别在于一个是直接拿字面量"+" 一个是拿引用变量"+"
+第一种情况是 String a = "abc"+"bcd";
+第二种情况是 String a = "abc";
+			String b = "bcd";
+			String c = a + b ;
+这两种结果的差异在于 第一种的是在编译的时候编译器会对两个字符串进行优化，这样优化完的结果是一个字面量的值即123456存在堆内存中
+而第二种情况则不是这样的，第二种情况下的"+"实际是利用了StringBuffer 每次都会创建一个新的对象的然后append().toString();
+即 String c = new StringBuffer(abc).append(bcd).toString);这样创建出来的是一个新的对象所以 c == MESSAGE 为false；
+
+另外是关于String.intern()这个方法。
+对于堆内存的进行String.intern()返回的是这个根据这个堆内存的对象的值去查找String池中是否有相同的字符串（相同的意思是 equals相等），如果有则返回他第一次出现的位置，
+然后指向这个引用。

@@ -1,0 +1,23 @@
+package com.jhc;
+/**
+ * 
+ * @author jhc
+ *
+ */
+public class StringTest {
+	private static final  String MESSAGE = "taobao";
+	public static void main(String[] args){
+		
+		int i = 10;
+		int j = 10;
+		System.out.println(i == j);
+		System.out.println("-----------");
+		String a = "tao" + "bao";
+		String b = "tao";
+		String c = "bao";	
+		System.out.println(a == MESSAGE);
+		System.out.println((b+c) == MESSAGE);
+		System.out.println("-----------");
+		
+	}
+}
